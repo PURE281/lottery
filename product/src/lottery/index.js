@@ -845,28 +845,28 @@ window.onload = function () {
     });
   }
 
-  musicBox.addEventListener(
-    "click",
-    function (e) {
-      if (music.paused) {
-        music.play().then(
-          () => {
-            stopAnimate = false;
-            animate();
-          },
-          () => {
-            addQipao("背景音乐自动播放失败，请手动播放！");
-          }
-        );
-      } else {
-        music.pause();
-        stopAnimate = true;
-      }
-    },
-    false
-  );
+  // musicBox.addEventListener(
+  //   "click",
+  //   function (e) {
+  //     if (music.paused) {
+  //       music.play().then(
+  //         () => {
+  //           stopAnimate = false;
+  //           animate();
+  //         },
+  //         () => {
+  //           addQipao("背景音乐自动播放失败，请手动播放！");
+  //         }
+  //       );
+  //     } else {
+  //       music.pause();
+  //       stopAnimate = true;
+  //     }
+  //   },
+  //   false
+  // );
 
-  setTimeout(function () {
-    musicBox.click();
-  }, 1000);
+  // setTimeout(function () {
+  //   musicBox.click();
+  // }, 1000);
 };

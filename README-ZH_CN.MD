@@ -1,10 +1,12 @@
 # 抽奖程序
 
-年会抽奖程序，3D 球体抽奖，支持奖品信息配置，参与抽奖人员信息`Excel`导入，抽奖结果`Excel`导出
+抽奖程序，3D 球体抽奖，支持奖品信息配置，参与抽奖人员信息`Excel`导入，抽奖结果`Excel`导出
 
-如果该程序对你有帮助😎😎😎，希望给个⭐**star**⭐喔。😘😘😘😍🥰🎉🎈🎃
+基于MIT协议开源，你可以在遵守协议的前提下自由使用、修改和分发该程序。
 
-> 立即体验一下： [https://moshang-ax.github.io/lottery/](https://moshang-ax.github.io/lottery/)
+基于该协议进行二开，添加背景视频及播放暂停功能（添加了透明度和模糊处理）
+
+> 原作者链接： [https://moshang-ax.github.io/lottery/](https://moshang-ax.github.io/lottery/)
 
 ## 技术
 
@@ -24,18 +26,11 @@
 
 ## 预览
 
-![lottery.gif](https://raw.githubusercontent.com/moshang-xc/blog/master/share/lottery.gif)
-
-![index.jpg](https://raw.githubusercontent.com/moshang-xc/blog/master/share/index.jpg)
-
-![start.jpg](https://raw.githubusercontent.com/moshang-xc/blog/master/share/start.jpg)
-
-![end.jpg](https://raw.githubusercontent.com/moshang-xc/blog/master/share/end.jpg)
 
 ## 安装
 
 ```
-git clone https://github.com/moshang-xc/lottery.git
+git clone https://github.com/PURE281/lottery.git
 
 cd lottery
 
@@ -47,17 +42,28 @@ npm install
 cd ../product
 npm install
 
-# 打包
+# 打包（前端）
 npm run build
 
-# 运行
+# 运行（前端）
 npm run serve
 
 # 开发调试
 npm run dev
 
 ```
-
+如遇到npm运行时提示openssl异常，是因为npm版本过高，需要降级
+或在npm运行前添加参数（亲测可行）
+```
+set --openssl-legacy-provider
+```
+或在scripts中添加参数（暂未尝试）
+```
+"scripts": {
+    "dev": "set --openssl-legacy-provider && webpack-dev-server --hot --inline",
+    "build": "set --openssl-legacy-provider && webpack"
+  },
+```
 ## 目录结构
 
 ```
@@ -150,6 +156,7 @@ const COMPANY = "MoShang";
 
 
 ## Docker部署方案
+Docker部署为原作者提供的方案，暂未尝试
 
 ### 概述
 
